@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炫酷科技感动效页面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* 科技感背景色 */
+            background-color: #0a192f; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 定义文字动画，增加更多变化 */
+        @keyframes textAnimation {
+            0% {
+                transform: scale(0.1) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                transform: scale(1.2) rotate(360deg);
+                opacity: 1;
+            }
+            40% {
+                transform: scale(0.8) rotate(720deg);
+            }
+            60% {
+                transform: scale(1.1) rotate(1080deg);
+            }
+            80% {
+                transform: scale(0.9) rotate(1440deg);
+            }
+            100% {
+                transform: scale(1) rotate(1800deg);
+                opacity: 1;
+            }
+        }
+
+        /* 定义背景粒子动画 */
+        @keyframes particleAnimation {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(100vw, 100vh);
+            }
+        }
+
+        /* 文字样式 */
+        .text {
+            font-size: 100px;
+            font-weight: bold;
+            /* 科技感文字颜色 */
+            color: #64ffda; 
+            text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda, 0 0 30px #64ffda, 0 0 40px #64ffda;
+            animation: textAnimation 3s ease-in-out forwards;
+        }
+
+        /* 背景粒子样式 */
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            /* 科技感粒子颜色 */
+            background-color: rgba(100, 255, 218, 0.5); 
+            border-radius: 50%;
+            animation: particleAnimation 10s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">郑欣琪是猪</div>
+    <!-- 生成一些背景粒子 -->
+    <div class="particle" style="top: 10%; left: 20%; animation-duration: 8s;"></div>
+    <div class="particle" style="top: 30%; left: 40%; animation-duration: 12s;"></div>
+    <div class="particle" style="top: 50%; left: 60%; animation-duration: 15s;"></div>
+    <div class="particle" style="top: 70%; left: 80%; animation-duration: 9s;"></div>
+    <div class="particle" style="top: 20%; left: 90%; animation-duration: 11s;"></div>
+</body>
+
+</html>
